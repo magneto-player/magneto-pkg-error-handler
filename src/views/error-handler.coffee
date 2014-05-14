@@ -2,14 +2,12 @@
 {View} = niceplay.Views
 
 class ErrorHandlerView extends View
-  @content: ->
-    @div id: 'error-handler', ->
-
-  initialize: ->
-
-
-  reportError: (err) ->
-    console.log 'An error occured: ', err
-
+  @content: (err) ->
+    @div class: 'error-msg-container', =>
+      @header =>
+        @h1 'An error occured'
+        @div class: 'error-msg', err
+      @footer =>
+        @div class: 'btn btn-danger', 'Ok'
 
 module.exports = ErrorHandlerView
