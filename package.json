@@ -1,5 +1,5 @@
 {
-  "name": "niceplay-pkg-error-handler",
+  "name": "magneto-pkg-error-handler",
   "version": "0.0.1",
   "main": "lib/pkg.js",
   "scripts": {

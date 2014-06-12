@@ -4,13 +4,13 @@ Shortcut = require './error-handler-shortcut'
 
 class ErrorHandler
   constructor: ->
-    niceplay.on 'error:new', @show
-    niceplay.on 'error:hide', @hide
+    magneto.on 'error:new', @show
+    magneto.on 'error:hide', @hide
 
   show: (error) =>
     @hide()
     @errorHandlerView = new ErrorHandlerView(error)
-    niceplay.workspace.append @errorHandlerView
+    magneto.workspace.append @errorHandlerView
 
     @errorHandlerView.on 'click', '.btn.btn-danger', =>
       @hide()

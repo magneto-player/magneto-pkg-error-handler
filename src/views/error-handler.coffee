@@ -1,5 +1,5 @@
 
-{View} = niceplay.Views
+{View} = magneto.Views
 
 class ErrorHandlerView extends View
   @content: (err) ->
